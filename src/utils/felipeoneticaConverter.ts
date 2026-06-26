@@ -4,19 +4,38 @@ const orderedPhonemes = Object.keys(ipaToFelipe).sort(
   (a, b) => b.length - a.length
 );
 
-export function convertIpaToFelipeonetica(
-  ipaText: string
-): string {
-  let result = ipaText
+function cleanIpaText(ipaText: string): string {
+  return ipaText
     .replaceAll("/", "")
     .replaceAll("[", "")
     .replaceAll("]", "")
+    .replaceAll("ˈ", "")
+    .replaceAll("ˌ", "")
+    .replaceAll(".", "")
     .trim();
+}
 
-  for (const phoneme of orderedPhonemes) {
-    result = result.split(phoneme).join(
-      ipaToFelipe[phoneme]
-    );
+export function convertIpaToFelipeonetica(ipaText: string): string {
+  const ipa = cleanIpaText(ipaText);
+  let result = "";
+  let index = 0;
+
+  while (index < ipa.length) {
+    let matched = false;
+
+    for (const phoneme of orderedPhonemes) {
+      if (ipa.startsWith(phoneme, index)) {
+        result += ipaToFelipe[phoneme];
+        index += phoneme.length;
+        matched = true;
+        break;
+      }
+    }
+
+    if (!matched) {
+      result += ipa[index];
+      index++;
+    }
   }
 
   return result;

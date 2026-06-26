@@ -1,0 +1,36 @@
+export const wordOverrides: Record<string, string> = {
+  hello: "jelou",
+  my: "mai",
+  friend: "frend",
+
+  the: "thu",
+  bird: "brd",
+  is: "iz",
+  here: "jir",
+
+  i: "ai",
+  learn: "lrn",
+  english: "ingglish",
+
+  heard: "jrd",
+  gave: "geiv",
+  followed: "fa-loud",
+  received: "ri-sivd",
+  developed: "de-ve-lapt",
+  studied: "sta-(r)id",
+  provided: "prou-vai-(r)ed",
+  read: "red",
+  established: "es-ta-blisht",
+  expressed: "eks-presd",
+
+  explanation: "eks-pla-nei-shon",
+  answer: "an-sr",
+  instruction: "in-strak-shon",
+  message: "me-seshᶻ",
+  plan: "plean",
+  example: "eks-am-pol",
+  reason: "ri-zen",
+  description: "des-krip-shon",
+  goal: "goul",
+  opinion: "ou-pi-ñon",
+};
