@@ -85,3 +85,43 @@ button.secondary {
   font-size: 20px;
   white-space: pre-wrap;
 }
+.word-status {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.word-status div {
+  background: #1f1f1f;
+  border: 1px solid #555;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.word-status h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #b7d7f5;
+}
+
+.word-status ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.word-status li {
+  margin-bottom: 6px;
+}
+
+.word-status p {
+  margin: 0;
+  color: #cfcfcf;
+}
+
+@media (max-width: 700px) {
+  .word-status {
+    grid-template-columns: 1fr;
+  }
+}

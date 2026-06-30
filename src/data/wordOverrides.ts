@@ -33,4 +33,7 @@ export const wordOverrides: Record<string, string> = {
   description: "des-krip-shon",
   goal: "goul",
   opinion: "ou-pi-ñon",
+  computer: "kom-piu-ter",
+  teacher: "ti-cher",
+  student: "stu-dent",
 };

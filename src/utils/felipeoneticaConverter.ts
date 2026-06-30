@@ -12,6 +12,8 @@ function cleanIpaText(ipaText: string): string {
     .replaceAll("ˈ", "")
     .replaceAll("ˌ", "")
     .replaceAll(".", "")
+    .replaceAll("͡", "")
+    .replaceAll("ᵊ", "ə")
     .trim();
 }
 
